@@ -1,0 +1,138 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+}
+section.hero {
+  height: 93vh !important;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-inner {
+  height: 93vh !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+.carousel-inner::before {
+  content: "" !important;
+  height: 97vh !important;
+  position: absolute !important;
+  background-color: rebeccapurple !important;
+  z-index: 9 !important;
+}
+
+.carousel-caption {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 10;
+  font-family: "Montserrat", sans-serif;
+}
+.carousel-caption h5 {
+  font-size: 3.7rem;
+  text-wrap: nowrap;
+  font-weight: bolder;
+}
+.carousel-caption p {
+  width: 70%;
+  font-size: 1.3rem;
+  line-height: 2;
+}
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+}
+/* Section third */
+section.third {
+  padding: 3rem;
+}
+section.third img {
+  height: 200px !important;
+  object-fit: cover;
+}
+section.third .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.third .top p {
+  width: 90%;
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding-bottom: 1.3rem;
+}
+section.third .top h1 {
+  font-size: 3.5rem;
+  padding-bottom: 1rem;
+}
+section.third .top h4 {
+  font-family: "Italianno";
+  color: rgb(132, 97, 6);
+  font-size: 2rem;
+}
+section.third .card-text {
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis for truncated text */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show before truncating */
+  -webkit-box-orient: vertical;
+}
+section.third .card {
+  width: 100%;
+}
+
+section.third .card-container {
+  width: 100% !important;
+  /* background-color: cadetblue; */
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+@media (max-width: 767px) {
+  section.hero {
+    height: auto;
+  }
+  .carousel-inner {
+    height: 100vh !important;
+    background-color: firebrick;
+  }
+  .carousel-inner img {
+    height: 100vh;
+    object-fit: cover;
+  }
+  .carousel-item {
+    height: 100vh;
+  }
+  .carousel-caption {
+    height: 80%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.7rem;
+    padding-top: 3rem !important;
+    text-wrap: wrap;
+    padding-bottom: 1rem;
+  }
+  .carousel-caption p {
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 2;
+  }
+  section.third {
+    margin-top: 3rem;
+    padding-inline: 2rem 1rem;
+  }
+}
