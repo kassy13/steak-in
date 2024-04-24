@@ -6,6 +6,12 @@ body {
   top: 0;
   z-index: 999999;
 }
+.nav-main-links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+}
 section.hero {
   height: 93vh !important;
   position: relative;
@@ -21,7 +27,6 @@ section.hero {
   content: "" !important;
   height: 97vh !important;
   position: absolute !important;
-  background-color: rebeccapurple !important;
   z-index: 9 !important;
 }
 
@@ -80,7 +85,7 @@ section.third .top h1 {
 section.third .top h4 {
   font-family: "Italianno";
   color: rgb(132, 97, 6);
-  font-size: 2rem;
+  font-size: 3rem;
 }
 section.third .card-text {
   overflow: hidden; /* Hide overflowing content */
@@ -95,19 +100,24 @@ section.third .card {
 
 section.third .card-container {
   width: 100% !important;
-  /* background-color: cadetblue; */
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
 }
 
 @media (max-width: 767px) {
+  .nav-main-links {
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+    height: 100vh;
+    /*  */
+  }
   section.hero {
     height: auto;
   }
   .carousel-inner {
     height: 100vh !important;
-    background-color: firebrick;
   }
   .carousel-inner img {
     height: 100vh;
@@ -133,6 +143,25 @@ section.third .card-container {
   }
   section.third {
     margin-top: 3rem;
-    padding-inline: 2rem 1rem;
+    padding-inline: 2rem;
+  }
+  section.third .top p {
+    width: 100%;
+  }
+  section.third .top h1 {
+    font-size: 2.2rem;
+  }
+  section.third .top h4 {
+    font-family: "Italianno";
+    color: rgb(132, 97, 6);
+    font-size: 3rem;
+  }
+  section.third .card {
+    width: 320px;
+  }
+
+  section.third .card-container {
+    width: 100% !important;
+    /* background-color: rebeccapurple; */
   }
 }
